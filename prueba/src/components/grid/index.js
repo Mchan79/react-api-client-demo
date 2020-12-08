@@ -20,19 +20,25 @@ const Grid = () => {
         getData();
 
     }, [])
-
-    const filter = useMemo(() => {
-        let datos = data;
-        return datos;
-    }, [data])
-
     return (
         <div>
-            <ul>
-                {filter.map((item, i) => (
-                    <li key={i}>{item.name}</li>
+
+            <table className="table table-striped">
+                <tbody>
+                {data.map((item, i) => (
+                    <tr>
+                        <th scope="row" key={item.id}>
+                                        {item.id}
+                        </th>
+                        <td>{item.name}</td>
+                        <td>{item.email}</td>
+                        <td>{item.body}</td>
+                    </tr>
                 ))}
-            </ul>
+
+                </tbody>
+
+            </table>
         </div>
     );
 };
