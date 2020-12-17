@@ -1,2 +1,2 @@
-# react-simple-select
+# react-api-client-demo
 ...
